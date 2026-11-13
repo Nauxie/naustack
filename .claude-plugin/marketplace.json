@@ -1,0 +1,14 @@
+{
+  "name": "naustack",
+  "description": "The skills I run my coding agents with, cut down to the process.",
+  "owner": {
+    "name": "Nauxie"
+  },
+  "plugins": [
+    {
+      "name": "naustack",
+      "source": "./",
+      "description": "Three short skill trees for coding agents: ship a change, write as the user, and run read-only sweeps."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "naustack",
+  "description": "Three short skill trees for coding agents: ship a change, write as the user, and run read-only sweeps.",
+  "author": {
+    "name": "Nauxie",
+    "url": "https://github.com/Nauxie"
+  },
+  "homepage": "https://github.com/Nauxie/naustack",
+  "repository": "https://github.com/Nauxie/naustack",
+  "keywords": ["skills", "pull-requests", "code-review", "workflow"]
+}
