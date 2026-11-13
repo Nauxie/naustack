@@ -77,3 +77,7 @@ The skills leave out everything local on purpose: who reviews what, branch
 names, the release path, your voice. Put those in your repo's own `AGENTS.md`,
 which the skills tell the agent to read first. When an agent gets something
 wrong, add the correction to the skill it belongs to.
+
+## License
+
+[MIT](LICENSE)

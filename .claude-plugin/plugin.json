@@ -7,5 +7,6 @@
   },
   "homepage": "https://github.com/Nauxie/naustack",
   "repository": "https://github.com/Nauxie/naustack",
+  "license": "MIT",
   "keywords": ["skills", "pull-requests", "code-review", "workflow"]
 }
