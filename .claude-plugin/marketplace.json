@@ -1,6 +1,6 @@
 {
   "name": "naustack",
-  "description": "The skills I run my coding agents with, cut down to the process.",
+  "description": "Skill trees for coding agents: ship a change, write in your voice, and run read-only sweeps.",
   "owner": {
     "name": "Nauxie"
   },
@@ -8,7 +8,7 @@
     {
       "name": "naustack",
       "source": "./",
-      "description": "Three short skill trees for coding agents: ship a change, write as the user, and run read-only sweeps."
+      "description": "Skill trees for coding agents: ship a change, write in your voice, and run read-only sweeps."
     }
   ]
 }

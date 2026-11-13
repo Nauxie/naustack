@@ -1,9 +1,8 @@
 # naustack
 
-The skills I run my coding agents with, cut down to the process. Every file is
-short on purpose, and nothing in it depends on a company, a repo or a tool. It
-installs as a plugin in Claude Code and Codex, and the skills load in any other
-agent that reads `SKILL.md`.
+Skill trees for coding agents: ship a change, write in your voice, and run
+read-only sweeps. They install as a plugin in Claude Code and Codex, and load in
+any other agent that reads `SKILL.md`.
 
 ```
 .
@@ -73,10 +72,9 @@ workflow costs a few lines until it is needed.
 
 ## Make it yours
 
-The skills leave out everything local on purpose: who reviews what, branch
-names, the release path, your voice. Put those in your repo's own `AGENTS.md`,
-which the skills tell the agent to read first. When an agent gets something
-wrong, add the correction to the skill it belongs to.
+Put your specifics in your repo's `AGENTS.md`, which the skills read first: who
+reviews what, branch names, the release path, your voice. When an agent gets
+something wrong, add the fix to the skill it belongs to.
 
 ## License
 
