@@ -1,8 +1,7 @@
 # naustack
 
-Skill trees for coding agents: ship a change, write in your voice, and run
-read-only sweeps. They install as a plugin in Claude Code and Codex, and load in
-any other agent that reads `SKILL.md`.
+The skills I use to run my coding agents. They install as a plugin in Claude
+Code and Codex, and load in any other agent that reads `SKILL.md`.
 
 ```
 .
@@ -16,9 +15,14 @@ any other agent that reads `SKILL.md`.
     ├── say                  words sent under your name
     │   ├── message          a chat message in your voice, drafted or sent
     │   └── review-comment   someone else's PR, merge call first
-    └── scan                 read-only sweeps
-        ├── refresh          what is open or waiting on you
-        └── alerts           what alerted, how bad, and whether it will recur
+    ├── scan                 read-only sweeps
+    │   ├── refresh          what is open or waiting on you
+    │   └── alerts           what alerted, how bad, and whether it will recur
+    └── orchestrate          one session that runs the others (needs cmux)
+        ├── start            launch a worker for a lane
+        ├── tick             check every worker, pass on what is new
+        ├── close            end a finished lane
+        └── worker           what every worker's brief ends with
 ```
 
 ## Install
@@ -36,9 +40,13 @@ codex plugin marketplace add Nauxie/naustack
 codex plugin add naustack@naustack
 ```
 
-Either way you get three skills: `naustack:ship`, `naustack:say` and
-`naustack:scan`. Together they add about 190 tokens to a session until one of
-them is used.
+Either way you get four skills: `naustack:ship`, `naustack:say`,
+`naustack:scan` and `naustack:orchestrate`. Together they add about 280 tokens
+to a session until one of them is used.
+
+`orchestrate` needs [cmux](https://cmux.com): it is how the orchestrator lists,
+reads, messages, starts and closes the other sessions, here or on a cloud
+machine.
 
 To update later:
 
