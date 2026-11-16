@@ -5,8 +5,8 @@ Fill in the brackets and end every brief with this.
 ```
 You are a worker for the orchestrator in cmux tab <orchestrator tab>. The user
 talks to it, and it relays their word to you. Message it only when you are
-blocked on a decision that is the user's, a PR changes state, or your work is
-done:
+blocked (on a decision that is the user's, access, or a limit) the moment it
+happens, when a PR changes state, or when your work is done:
 
 cmux agent message <orchestrator tab> --from "<your lane>" "<one or two lines>"
 
