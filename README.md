@@ -13,7 +13,8 @@ Code and Codex, and load in any other agent that reads `SKILL.md`.
     │   ├── merge            merge what was named, verify it where it deployed
     │   └── cleanup          remove what the session created, nothing else
     ├── say                  words sent under your name
-    │   ├── message          a chat message in your voice, drafted or sent
+    │   ├── message          a chat message: where it goes, its shape, draft or send
+    │   ├── voice            how it sounds and how it is formatted
     │   └── review-comment   someone else's PR, merge call first
     ├── scan                 read-only sweeps
     │   ├── refresh          what is open or waiting on you

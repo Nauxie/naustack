@@ -6,14 +6,19 @@ nits, needs author follow-up, or not merge ready.
 1. Check the PR's state: changed files, commits, comments, reviews, checks.
 2. Read only the files and call sites needed to judge the risk.
 3. For each finding, confirm the failure can actually be reached.
-4. Run the narrowest useful check.
+4. Run the narrowest useful check. For a non-trivial change, add a pass from
+   another model family, as in the `ship` skill's review step.
 
 Prefer one real blocker to several speculative concerns. Don't block on style
-unless it can cause a defect or real confusion. A migration or deploy order
-that the PR spells out and that can be coordinated is rollout work, not a
-blocker.
+unless it can cause a defect or real confusion. A migration, an artifact to
+publish, or a deploy order that the PR spells out and that can be coordinated
+is rollout work, not a blocker.
 
-Post the review on the PR itself, with inline comments for specific findings:
+Checks still running never hold the verdict. Give it now, assuming CI passes
+at that commit.
+
+Post the review on the PR itself, with inline comments for specific findings.
+If the ask came through chat, reply there too: a few words and a link.
 
 - Merge ready, and the user asked for sign-off: approve in a few words. Keep
   the list of what you checked for your report to the user.
