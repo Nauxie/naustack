@@ -1,7 +1,8 @@
 # Merge
 
 From a final check, through the merge, to the change verified where it
-deployed. Then stop.
+deployed. Then stop. This is for repos that release to users. In a personal
+sandbox, a plain merge is enough.
 
 ## Two limits
 
@@ -14,6 +15,7 @@ deployed. Then stop.
 
 ## Before
 
+- Read how the repo merges and releases, every time. It changes.
 - Re-check each PR now: head commit, required checks, approvals, open threads.
   If commits landed after the approval, re-read the diff.
 - Work out what the merge will deploy. If it reaches further than usual, say
@@ -26,8 +28,9 @@ deployed. Then stop.
 ## Merge
 
 Use the repo's normal path, pinned to the head commit you checked, so nothing
-pushed later rides along. A stack merges bottom-up, and a child never goes in
-before its parent has landed.
+pushed later rides along. A merge queue can drop a PR for a failure in the
+batch that isn't its own: read the run before re-queueing. A stack merges
+bottom-up, and a child never goes in before its parent has landed.
 
 ## Verify
 
@@ -35,7 +38,15 @@ before its parent has landed.
   or a descendant of it. Your own run being green is not that.
 - Check the behaviour the PR changed, in that environment. A green deploy and
   a health check show the service started, not that the change works.
-- Read fresh logs for new errors since the deploy.
+- Read fresh logs for new errors since the deploy, and the result of any
+  scheduled post-deploy check. Don't trigger one that spends a budget.
+
+## After
+
+Remove the PR's worktree, branch and build output without being asked, once
+nothing in them is uncommitted or still running. Report what merged, what you
+saw in the environment, what you could not check, and that later
+environments were not touched.
 
 ## If something fails
 

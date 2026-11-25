@@ -15,7 +15,9 @@ made something, it is not yours.
    - stop your processes by the exact id you started, never by name or pattern
    - delete temp files that hold credentials
    - remove finished worktrees and their branches
-   - remove their build outputs, your containers, and the remaining temp files
+   - remove their build outputs, including ones stored outside the checkout
+     when they record its path and that path is gone
+   - remove your containers and the remaining temp files
    - cancel your scheduled jobs, and tell the user about unsent drafts instead
      of deleting them
 5. Verify every item: directory gone, process gone, port free, branch gone.
