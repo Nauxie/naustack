@@ -8,6 +8,7 @@ Code and Codex, and load in any other agent that reads `SKILL.md`.
 ├── AGENTS.md                always on: how to work, how to report
 └── skills
     ├── ship                 a change, from branch to merged
+    │   ├── e2e              review, prove it in the real product, then the PR
     │   ├── pr               open or update a PR, watch it, react
     │   ├── review           review your own branch until a fresh reviewer finds nothing
     │   ├── merge            merge what was named, verify it where it deployed

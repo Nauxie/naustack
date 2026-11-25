@@ -1,15 +1,16 @@
 ---
 name: ship
-description: Take a change from a branch to merged and cleaned up - open or update a pull request and see it through review, self-review the branch, merge, clean up after. Use when asked to open or update a PR, review your own branch, merge, or clean up after a task.
+description: Take a change from a branch to merged and cleaned up - self-review the branch, prove it end to end, open or update a pull request and see it through review, merge, clean up after. Use when asked to open or update a PR, review your own branch, check a change end to end, merge, or clean up after a task.
 ---
 
 # Ship
 
-A change moves through four steps. Read the file for the step you are on, and
+A change moves through these steps. Read the file for the step you are on, and
 only that one.
 
 | Step | Read | Done when |
 |-|-|-|
+| Built to a reviewed PR, proven end to end | `e2e.md` | the PR is open with the end-to-end result on it |
 | Open a PR and see it through review | `pr.md` | approved, checks green, no open threads |
 | Review your own branch | `review.md` | a fresh reviewer finds nothing real |
 | Merge | `merge.md` | the change is verified where it deployed |
